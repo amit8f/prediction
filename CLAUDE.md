@@ -30,4 +30,6 @@ Owner: Amit (Israel, under $5,000, free tools only, small token budget). Use pla
 ## Status log
 - Ideas tried: 0.
 - Step 1 (eligibility) done 11 Nov 2026: see `research/step1_eligibility.md`. Not a hard no on either platform. Israeli tax treatment is an open risk for a professional.
-- Step 2 in progress: `research/prereg/PM1.md` approved by Amit 11 Nov 2026 (Kalshi venue). No market data pulled yet. Next: verify the [VERIFY] items on the live API, pick the category by counts, show funnel counts.
+- Step 2 data checks done 11 Nov 2026: see `research/step2_data_checks.md`. No outcome data read. Waiting for Amit's sign-off on three things before Step 3: category (Sports recommended over parlay "Exotics"), holdout by days instead of events (as written it has 38 days and PM1 needs 60), and two bug fixes (scheduled close = `expected_expiration_time`; fee uses the per-series multiplier).
+- Kalshi pull notes: go series by series (an unfiltered pull is ~100k markets a day); the full listing pull takes about 3 hours and is not stored in the repo.
+- Amit (11 Nov 2026): has an account; tax is closed on his side.

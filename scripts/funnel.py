@@ -28,7 +28,7 @@ ev = C.defaultdict(set); mk = C.Counter()
 for m in kept: ev[m['cat']].add(m['event_ticker']); mk[m['cat']] += 1
 print('\nCATEGORY  events  markets')
 for c, e in sorted(ev.items(), key=lambda x: -len(x[1])): print(f'  {c}: {len(e)}  {mk[c]}')
-cat = max(ev, key=lambda c: len(ev[c])); K = [m for m in kept if m['cat'] == cat]
+cat = sys.argv[4] if len(sys.argv) > 4 else max(ev, key=lambda c: len(ev[c])); K = [m for m in kept if m['cat'] == cat]
 print('\nCHOSEN:', cat)
 # ladder fingerprint across event tickers
 thr = re.compile(r'(\$?\d[\d,]*\.?\d*\s*(°[CF]|%|or (higher|lower|more|above|below|fewer)|\+))|between \S+ and \S+|above \S+|below \S+', re.I)
@@ -54,3 +54,11 @@ print('top series by markets:', top.most_common(8))
 # same real-world game listed under several series (winner, totals, props): key = event suffix
 game = {m['event_ticker'].split('-', 1)[-1] for m in K}
 print('distinct game keys (event ticker minus series prefix):', len(game), 'vs events', n)
+# alternative split: most recent 25% of distinct snapshot DAYS
+dd = sorted({d.date() for d in days}); cut = dd[int(len(dd) * 0.75)]
+h = [d for d in days if d.date() >= cut]
+print('alt split by days: holdout from', cut, '->', len(h), 'events,', len({d.date() for d in h}), 'days; training', n - len(h), 'events,', len(dd) - len({d.date() for d in h}), 'days')
+hg = {m['event_ticker'].split('-', 1)[-1] for m in K if evT[m['event_ticker']].date() >= cut}
+print('alt holdout distinct game keys:', len(hg))
+import statistics
+bym = C.Counter(d.strftime('%Y-%m') for d in days); print('events by month:', sorted(bym.items()))

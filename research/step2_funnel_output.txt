@@ -1,0 +1,44 @@
+FUNNEL
+  pulled (close >= 1 Jan 2025): 16575915
+  dropped, open < 48h before scheduled close: 12176385
+  dropped, closed before snapshot T: 1878574
+  dropped, scheduled close outside 1 Jan 2025 .. pull day: 144473
+  kept markets: 2376483
+
+CATEGORY  events  markets
+  Exotics: 501706  1313253
+  Sports: 164063  855328
+  Climate and Weather: 15211  90250
+  Entertainment: 3145  32904
+  Financials: 1494  26746
+  Politics: 1192  5190
+  Economics: 944  9169
+  Mentions: 818  15129
+  Science and Technology: 671  5157
+  Commodities: 612  19565
+  Elections: 488  2110
+  Crypto: 211  1392
+  Companies: 40  112
+  World: 35  113
+  Social: 21  22
+  Health: 16  39
+  Transportation: 3  3
+  Culture: 1  1
+
+(category forced to Sports for the lines below; see report)
+CHOSEN: Sports
+threshold templates spanning >1 event ticker on the same day (possible hidden ladders): 197
+    39 2026-09-18 # overtime periods ['KXNCAAFOT-26SEP18HOUTTU', 'KXNCAAFOT-26SEP18MIAWAKE', 'KXNCAAFOT-26SEP18PRSTORE']
+    38 2026-09-19 # overtime periods ['KXNCAAFOT-26SEP19ARSTTCU', 'KXNCAAFOT-26SEP19BYUCSU', 'KXNCAAFOT-26SEP19CHARAPP']
+    34 2026-09-11 # overtime periods ['KXNCAAFOT-26SEP11MIZZKU', 'KXNCAAFOT-26SEP11NORFUVA', 'KXNCAAFOT-26SEP11RICHNCST']
+    31 2026-09-12 # overtime periods ['KXNCAAFOT-26SEP12ARKUTAH', 'KXNCAAFOT-26SEP12BGSUNEB', 'KXNCAAFOT-26SEP12BUFFFIU']
+    30 2026-09-04 # overtime periods ['KXNCAAFOT-26SEP04FRESUSC', 'KXNCAAFOT-26SEP04INSTPUR', 'KXNCAAFOT-26SEP04LIUKU']
+events 164063, distinct snapshot days 578, markets 855328, series 1877
+first/last snapshot 2025-01-25 15:00:00+00:00 2026-11-09 23:00:00+00:00
+holdout split: events with earliest snapshot >= 2026-10-03 22:45:00+00:00 -> 41042 holdout events, 38 days
+fee (type, multiplier) by market: [(('quadratic', 1), 843340), (('quadratic', 0.5), 11988)]
+top series by markets: [('KXNCAAFSPREAD', 34204), ('KXNCAAFTOTAL', 25405), ('KXNFLRECYDS', 17567), ('KXNFLREC', 13726), ('KXNCAAFTEAMTOTAL', 13365), ('KXNCAAF1HSPREAD', 13031), ('KXNFLSPREAD', 12032), ('KXNHLTOTAL', 10443)]
+distinct game keys (event ticker minus series prefix): 74355 vs events 164063
+alt split by days: holdout from 2026-06-18 -> 107966 events, 145 days; training 56097 events, 433 days
+alt holdout distinct game keys: 36861
+events by month: [('2025-01', 2), ('2025-02', 13), ('2025-03', 163), ('2025-04', 88), ('2025-05', 119), ('2025-06', 305), ('2025-07', 136), ('2025-08', 526), ('2025-09', 1098), ('2025-10', 1759), ('2025-11', 3889), ('2025-12', 4935), ('2026-01', 6945), ('2026-02', 6971), ('2026-03', 7638), ('2026-04', 9011), ('2026-05', 9166), ('2026-06', 7246), ('2026-07', 10303), ('2026-08', 21951), ('2026-09', 26916), ('2026-10', 34601), ('2026-11', 10282)]
