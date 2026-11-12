@@ -103,3 +103,15 @@ If the edge were 1 cent per contract, $100 a month needs about 10,000 contracts 
 ## 16. No LLM features
 
 None are used, so the model-cutoff rule doesn't apply to PM1.
+
+## 17. Amendment 1 (12 Nov 2026, approved by Amit, before any outcome data was read)
+
+Made after the Step 2 data checks (`research/step2_data_checks.md`). At this point only listing fields and pre-snapshot quotes on a 600-market training-period sample had been read. No result field has been read. Where this section differs from the text above, this section wins.
+
+1. Category (section 5): Sports. "Exotics" had more event tickers, but those are parlays (bundles of sports markets), not independent events. Sports: 164,063 events, 74,355 distinct games, 578 snapshot days.
+2. Holdout (sections 8 and 9): the holdout is the most recent 25% of distinct snapshot days, not of events. Holdout = events whose earliest snapshot day (UTC) is 18 Jun 2026 or later (145 days, 107,966 events). Training = everything earlier (433 days, 56,097 events). Reason: the newest 25% of events covered only 38 days, below the 60 days the pass rule needs.
+3. Scheduled close (section 6, bug fix): the field is `expected_expiration_time`. `close_time` is overwritten on early close and is used only to skip markets that had closed by T.
+4. Fee (section 7, bug fix): 0.07 x series fee multiplier x contracts x P x (1 - P), rounded up to the next cent. The multiplier is the one in force at T from Kalshi's series fee data. No settlement fee.
+5. Verified with no change: candles carry bid and ask, and the candle timestamp marks the end of the hour.
+6. Data cut: the universe is frozen at the listing pull of 11 Nov 2026 (last snapshot 9 Nov 2026). Markets settled later are new data.
+7. Reporting only: the result will show the count of distinct games next to the count of events. The test statistic is unchanged (day-clustered).
