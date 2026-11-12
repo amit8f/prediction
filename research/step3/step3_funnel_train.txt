@@ -1,0 +1,13 @@
+Thu Nov 12 11:42:52 UTC 2026
+  eligible markets: 233147
+  quote rows pulled: 233147
+  drop: bid 0 or ask 1.00: 39179
+  drop: mid exactly 0.50: 5181
+  drop: no candle or no quote at/before T: 1513
+  drop: mutually exclusive ladder, mids sum > 1.25 (events 513): 1629
+  tradeable markets: 185645
+  in bucket 0.70-0.80: markets / events / days / games: 40212 / 22274 / 388 / 15977
+  in bucket 0.80-0.90: markets / events / days / games: 34038 / 18693 / 384 / 12882
+  in bucket 0.90-0.97: markets / events / days / games: 29275 / 14178 / 364 / 10875
+  quote age at T (hours) median/90th/99th: 0.0 / 1.4 / 10.0
+  events with ME flag known: 54506 of 54515

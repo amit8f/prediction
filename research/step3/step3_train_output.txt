@@ -1,0 +1,6 @@
+Thu Nov 12 11:42:58 UTC 2026
+result status counts: [(('finalized', 'no'), 150380), (('finalized', 'yes'), 80900), (('finalized', 'scalar'), 1867)]
+0.70-0.80 {'non yes/no result': 223} {'markets': 40212, 'events': 22274, 'days': 388, 'games': 15977, 'mean': np.float64(-0.0518), 'se': 0.0028, 't': np.float64(-18.5768), 'ci': (np.float64(-0.05719040918910778), np.float64(-0.04639181341247001))}
+0.80-0.90 {'non yes/no result': 229} {'markets': 34038, 'events': 18693, 'days': 384, 'games': 12882, 'mean': np.float64(-0.0622), 'se': 0.0029, 't': np.float64(-21.7926), 'ci': (np.float64(-0.06782960839541319), np.float64(-0.056466228001638315))}
+0.90-0.97 {'non yes/no result': 447} {'markets': 29275, 'events': 14178, 'days': 364, 'games': 10875, 'mean': np.float64(-0.1091), 'se': 0.0046, 't': np.float64(-23.644), 'ci': (np.float64(-0.11801442526172327), np.float64(-0.10014223868165945))}
+CHOSEN BUCKET 0.70-0.80
