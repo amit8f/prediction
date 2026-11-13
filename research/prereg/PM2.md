@@ -1,6 +1,6 @@
 # PM2 pre-registration: buying Kalshi crypto contracts when they lag the spot price
 
-Status: DRAFT, waiting for Amit's approval. Written 13 Nov 2026. Idea number 2, so the pass bar is t >= 3.2.
+Status: APPROVED by Amit on 13 Nov 2026 (merge of PR #4, 07:54 UTC). Amendment 1 (section 17) is waiting for Amit's approval. Written 13 Nov 2026. Idea number 2, so the pass bar is t >= 3.2.
 
 What had been read when this was written: series listings (from the 11 Nov pull), the rules text of a few open crypto markets, the field names of one settled market's 1-minute candles (no prices printed), and two live minutes of one open market's quotes. No settled crypto price, no crypto result, and no historical spot price had been read.
 
@@ -115,3 +115,15 @@ Fees near 50 cents are about 1.75 cents per contract, so an edge has to beat tha
 ## 16. No LLM features
 
 None are used.
+
+## 17. Amendment 1 (13 Nov 2026, asked for by Amit, before any outcome data was read)
+
+Amit asked for all four coins (no change) and for the smallest delay possible. At this point no settled crypto price, no crypto result and no historical spot price had been read. Where this section differs from the text above, this section wins.
+
+1. Delay (section 6): the primary test uses zero delay. The model uses spot up to minute m, and we buy at the Kalshi quote from the 1-minute candle ending at the same minute m. One minute is the finest step in the free history, so this is the smallest delay that can be tested.
+2. What zero delay means: it assumes an order placed the instant the minute ends. A real bot needs about 0.2 to 1 second, so the result is a best case. It is not look-ahead, because the spot price and the quote are both known at minute m. [VERIFY that Coinbase and Kalshi minute boundaries line up to the second. If a spot candle can include any trade after m, shift spot back one minute. That is a bug fix.]
+3. The one-minute-delay version (the old primary) moves to the exploratory list and is always reported next to the primary. It cannot produce a pass or a fail. If zero delay passes and one minute does not, the report says plainly that the edge needs a fast bot.
+4. Forward logger (section 11): after a pass, the logger records Kalshi quotes and spot at least once a second, and replays the rule with delays of 0.5, 1, 2 and 5 seconds. Real money is discussed only if the edge survives a delay we can really achieve.
+5. Random control (section 10): uses zero delay too.
+6. Nothing else changes: same markets, model, margin grid, holdout, bar (t >= 3.2) and pass rule.
+
