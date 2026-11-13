@@ -1,6 +1,6 @@
 # PM2 pre-registration: buying Kalshi crypto contracts when they lag the spot price
 
-Status: APPROVED by Amit on 13 Nov 2026 (merge of PR #4, 07:54 UTC). Amendment 1 (section 17) is waiting for Amit's approval. Written 13 Nov 2026. Idea number 2, so the pass bar is t >= 3.2.
+Status: APPROVED by Amit on 13 Nov 2026 (merge of PR #4, 07:54 UTC). Amendment 1 (section 17) APPROVED by Amit on 13 Nov 2026 (merge of PR #5, 07:57 UTC). Written 13 Nov 2026. Idea number 2, so the pass bar is t >= 3.2.
 
 What had been read when this was written: series listings (from the 11 Nov pull), the rules text of a few open crypto markets, the field names of one settled market's 1-minute candles (no prices printed), and two live minutes of one open market's quotes. No settled crypto price, no crypto result, and no historical spot price had been read.
 
