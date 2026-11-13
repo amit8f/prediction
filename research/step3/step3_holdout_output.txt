@@ -1,0 +1,12 @@
+Thu Nov 12 13:12:22 UTC 2026
+result status counts: [(('finalized', 'no'), 424262), (('finalized', 'yes'), 188164), (('finalized', 'scalar'), 9755)]
+PRIMARY 0.70-0.80 {'non yes/no result': 888}
+{'markets': 84848, 'events': 46005, 'days': 145, 'games': 17322, 'mean': np.float64(-0.05106190060791624), 'se': 0.002107529942566604, 't': np.float64(-24.228315610895542), 'ci': (np.float64(-0.05522995134761634), np.float64(-0.04702113560931701))}
+control mean -0.06647869461393707 diff 0.015416794006020832 diff CI [0.01031797 0.02083703] diff t 5.723400707613106
+passes: mean>0 False t>=3 False CI>0 False events>=300 True days>=60 True
+EXPLORATORY (never a pass):
+  0.80-0.90 {'markets': 96020, 'events': 44843, 'days': 145, 'games': 14704, 'mean': np.float64(-0.056), 'se': 0.0024, 't': np.float64(-23.1345), 'ci': (np.float64(-0.06084816141411251), np.float64(-0.051364656078969846))}
+  0.90-0.97 {'markets': 128521, 'events': 46526, 'days': 145, 'games': 16482, 'mean': np.float64(-0.0892), 'se': 0.0038, 't': np.float64(-23.5723), 'ci': (np.float64(-0.09739806624841366), np.float64(-0.08231932038362602))}
+  voids as total loss {'markets': 84848, 'events': 46005, 'days': 145, 'games': 17322, 'mean': np.float64(-0.0591), 'se': 0.0022, 't': np.float64(-26.6101), 'ci': (np.float64(-0.06350786407315402), np.float64(-0.05488881515341856))}
+  by month (market-level mean, n): [('2026-06', -0.0766, 1656), ('2026-07', -0.0407, 4751), ('2026-08', -0.0504, 12269), ('2026-09', -0.0507, 22666), ('2026-10', -0.0485, 34134), ('2026-11', -0.0452, 9372)]
+  trades per day in holdout: 585.2
