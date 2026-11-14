@@ -1,0 +1,62 @@
+== scheduled close = expected_expiration_time (plan) ==
+close field: expected_expiration_time
+pulled                                                            3,843,748
+scheduled close outside 1 Jan 2025 to 13 Nov 2026                    26,130
+trading ends (close_time) before the snapshot                       178,046
+no time to rest an order (snapshot not before close minus 1h)     2,379,583
+combo series (city-pair weather)                                      9,324
+combo (multivariate) market                                          13,697
+kept markets                                                      1,236,968  (settlement value only: 250)
+
+category                     events    markets  days series
+Climate and Weather          15,572     96,138   682    140
+Financials                   11,090    931,558   550    251
+Economics                     3,810     64,022   485    199
+Entertainment                 3,795     42,923   656   1020
+Mentions                      2,012     34,168   393    229
+Politics                      1,522      7,349   365    702
+Commodities                   1,453     51,659   431     58
+Science and Technology          793      6,416   140    132
+Elections                       546      2,424   154    527
+Companies                        40        112     9     39
+World                            39        129    20     27
+Social                           21         22    13     17
+Health                           18         41     6     16
+Transportation                    4          6     4      4
+Culture                           1          1     1      1
+
+== same with close_time (comparison only) ==
+close field: close_time
+pulled                                                            3,843,748
+no time to rest an order (snapshot not before close minus 1h)     2,414,068
+scheduled close outside 1 Jan 2025 to 13 Nov 2026                     1,084
+combo series (city-pair weather)                                      9,204
+combo (multivariate) market                                          13,697
+kept markets                                                      1,405,695  (settlement value only: 447)
+
+category                     events    markets  days series
+Climate and Weather          15,710     97,049   682    169
+Financials                   11,841    939,399   533    620
+Entertainment                11,243    123,342   682   1616
+Economics                     5,212     82,383   452    433
+Mentions                      4,095     74,000   547    433
+Elections                     3,155     15,496   354   1671
+Politics                      2,585     13,021   581   1437
+Commodities                   1,463     51,981   436     61
+Science and Technology        1,029      8,355   274    244
+Companies                        79        252    44     72
+World                            60        243    32     48
+Social                           43        100    31     37
+Health                           23         60     8     19
+Transportation                    7         12     9      6
+Culture                           1          1     1      1
+Education                         1          1     1      1
+
+== Climate and Weather split ==
+weather markets 96138 events 15572 series 140
+snapshot days 682 first 2024-12-31 last 2026-11-12 holdout from 2026-05-27
+train events 7702 days 512 markets 43516
+holdout events 7870 days 170 markets 52622
+events split across the cut 0
+events by type [('daily high', 8857), ('daily low', 5579), ('rain', 826), ('other', 239), ('snow', 71)]
+events by month [('2024-12', 10), ('2025-01', 270), ('2025-02', 228), ('2025-03', 253), ('2025-04', 245), ('2025-05', 251), ('2025-06', 246), ('2025-07', 254), ('2025-08', 254), ('2025-09', 243), ('2025-10', 253), ('2025-11', 250), ('2025-12', 404), ('2026-01', 585), ('2026-02', 768), ('2026-03', 895), ('2026-04', 1217), ('2026-05', 1284), ('2026-06', 1244), ('2026-07', 1282), ('2026-08', 1368), ('2026-09', 1560), ('2026-10', 1589), ('2026-11', 619)]
