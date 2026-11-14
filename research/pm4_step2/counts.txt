@@ -1,0 +1,41 @@
+markets 2547937
+trading life (markets): {'>2 days': 97607, '1-2 days': 4685, '2-24 h': 822171, '1-2 h': 11700, '<=15 min': 20281, '15-60 min': 1591493}
+scheduled close minus trading end: {'exp after close >1h': 118689, 'exp == close': 2378644, 'exp after close <=5 min': 50281, 'close AFTER exp': 143, 'exp after close 5min-1h': 180}
+can_close_early: Counter({True: 2547936, False: 1})
+events 38457
+events whose markets span >1 snapshot day 243
+series 525
+top series by events:
+  KXEURUSD15M            events   3,476 markets     3,476
+  KXGBPUSD15M            events   3,476 markets     3,476
+  KXUSDJPY15M            events   3,476 markets     3,476
+  KXINXU                 events   3,117 markets   844,852
+  KXNASDAQ100U           events   3,117 markets 1,054,102
+  KXUSDCAD15M            events   2,537 markets     2,537
+  KXAUDUSD15M            events   2,537 markets     2,537
+  KXUSDJPYH              events   2,314 markets   231,400
+  KXEURUSDH              events   2,306 markets   230,600
+  KX5YRRATE15M           events     981 markets       981
+  KX30YRRATE15M          events     981 markets       981
+  KX2YRRATE15M           events     981 markets       981
+  KX10YRRATE15M          events     981 markets       981
+  KXNDQHUD               events     572 markets       572
+  KXINXHUD               events     572 markets       572
+  KXDJI                  events     510 markets    30,577
+  KXNASDAQ100            events     472 markets    14,160
+  KXINX                  events     472 markets    14,160
+  KXEURUSD               events     463 markets     6,945
+  KXUSDJPY               events     463 markets     6,945
+  KX10YRRATEH            events     318 markets     7,555
+  KX5YRRATEH             events     318 markets     8,047
+  KX30YRRATEH            events     318 markets     6,727
+  KX7YRRATEH             events     318 markets     7,917
+  KX2YRRATEH             events     318 markets     7,794
+snapshot days 593 2024-01-29 2026-11-13
+holdout from 2026-05-29 days 148
+training events 11249 markets 1988220 | holdout events 27208 markets 559717
+events straddling the cut 23
+events by month: {'2024-01': 1, '2024-02': 1, '2024-04': 1, '2024-06': 1, '2024-07': 1, '2024-08': 2, '2024-10': 2, '2024-12': 21, '2025-01': 480, '2025-02': 592, '2025-03': 768, '2025-04': 776, '2025-05': 768, '2025-06': 736, '2025-07': 824, '2025-08': 785, '2025-09': 775, '2025-10': 830, '2025-11': 640, '2025-12': 872, '2026-01': 746, '2026-02': 370, '2026-03': 432, '2026-04': 432, '2026-05': 426, '2026-06': 550, '2026-07': 1010, '2026-08': 1222, '2026-09': 2782, '2026-10': 13643, '2026-11': 7968}
+markets settled before 12 Sep 2026 (historical, 1 call each): 2299986
+markets per event: median 1 max 480
+distinct (series, close hour) slots 24466
