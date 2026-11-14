@@ -1,0 +1,13 @@
+FUNNEL hold
+  markets in set 2,866,025
+  drop: no usable quote in any signal minute 2,671,548
+  tradeable markets 193,958
+  drop: quote but no spot/sigma/strike 488
+  drop: quote pull failed 31
+  drop: market not in quote files 0
+  traded M=0.02 delay=0m: markets 134,840 events 74,481 days 170
+  traded M=0.02 delay=1m: markets 145,974 events 78,956 days 170
+  traded M=0.04 delay=0m: markets 106,567 events 62,851 days 170
+  traded M=0.04 delay=1m: markets 138,352 events 78,541 days 170
+  traded M=0.06 delay=0m: markets 76,881 events 48,704 days 170
+  traded M=0.06 delay=1m: markets 129,472 events 77,711 days 170

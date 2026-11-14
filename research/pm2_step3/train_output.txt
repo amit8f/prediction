@@ -1,0 +1,21 @@
+FUNNEL train
+  markets in set 2,165,371
+  drop: no usable quote in any signal minute 1,950,784
+  tradeable markets 213,151
+  drop: quote but no spot/sigma/strike 1,005
+  drop: quote pull failed 14
+  drop: market not in quote files 417
+  traded M=0.02 delay=0m: markets 123,946 events 65,887 days 512
+  traded M=0.02 delay=1m: markets 151,104 events 76,279 days 512
+  traded M=0.04 delay=0m: markets 88,666 events 52,041 days 512
+  traded M=0.04 delay=1m: markets 139,123 events 75,342 days 512
+  traded M=0.06 delay=0m: markets 57,578 events 37,282 days 512
+  traded M=0.06 delay=1m: markets 125,872 events 73,778 days 512
+trades with no usable result (dropped): 0
+M=0.02 delay=0m  markets 123,946  events 65,887  days 512  mean -0.0077  t -4.1105  lo -0.0113  hi -0.0040
+M=0.02 delay=1m  markets 151,104  events 76,279  days 512  mean -0.0345  t -18.5927  lo -0.0382  hi -0.0309
+M=0.04 delay=0m  markets 88,666  events 52,041  days 512  mean -0.0011  t -0.5401  lo -0.0052  hi 0.0030
+M=0.04 delay=1m  markets 139,123  events 75,342  days 512  mean -0.0342  t -19.7817  lo -0.0376  hi -0.0307
+M=0.06 delay=0m  markets 57,578  events 37,282  days 512  mean 0.0039  t 1.5549  lo -0.0010  hi 0.0088
+M=0.06 delay=1m  markets 125,872  events 73,778  days 512  mean -0.0310  t -17.9909  lo -0.0343  hi -0.0275
+LOCKED M = 0.06
