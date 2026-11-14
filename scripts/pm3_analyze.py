@@ -8,7 +8,7 @@ ts=lambda s:datetime.fromisoformat(s.replace('Z','+00:00')).timestamp()
 U={m['t']:m for m in map(json.loads,open(uf)) if m['sp']==which}
 R=json.load(open(rf))
 fee_type={s['ticker']:s.get('fee_type') for s in json.load(gzip.open('/mnt/project-files/data/kalshi_series_2026-11-11.json.gz'))['series']}
-fun=Co.Counter(); rows=[]
+fun=Co.Counter(); rows=[]; seen=set()
 def yval(t):
     r=R.get(t)
     if not r: return None
@@ -29,6 +29,8 @@ def fee(f,p): return math.ceil(0.0175*f*p*(1-p)*100-1e-9)/100 if f>0 else 0.0
 for l in open(pf):
     x=json.loads(l); m=U.get(x['t'])
     if not m: continue
+    if x['t'] in seen: fun['dropped: same market listed twice (live and historical)']+=1; continue
+    seen.add(x['t'])
     fun['markets pulled']+=1
     if x['st'] in('fail','trfail'): fun['dropped: API failure']+=1; continue
     if not x['q']: fun['dropped: no quote in the 6h before snapshot']+=1; continue
@@ -85,3 +87,9 @@ diff=s1[idx].sum(1)/c1[idx].sum(1)-s2[idx].sum(1)/np.maximum(c2[idx].sum(1),1)
 print(f'rule minus control {(mu-cm.mean())*100:+.3f}c, bootstrap 95% [{np.percentile(diff,2.5)*100:+.3f}, {np.percentile(diff,97.5)*100:+.3f}]c')
 days=170 if which=='hold' else nd; per_day=r.fY.sum()/days
 print(f'dollar check: filled contracts per day {per_day:.1f}, filled orders per day {fo/days:.2f}, cash tied up per filled contract {(1-r[r.fY>0].pY).mean():.3f}, implied monthly net ${per_day*30*mu:+.2f}')
+# exploratory only (never counts): by month of scheduled close
+rr=r[r.fY>0].assign(mon=lambda d:d.day.str[:7]); em=evals(r).assign(mon=lambda d:d.day.str[:7])
+print('\nexploratory by month: filled contracts/day, event mean (c), implied $/month')
+for mo,g2 in rr.groupby('mon'):
+    nd2=r[r.day.str[:7]==mo].day.nunique(); v=em[em.mon==mo].v.mean()
+    print(mo, f'{g2.fY.sum()/nd2:7.1f} {v*100:+6.2f} {g2.fY.sum()/nd2*30*v:+8.2f}')
