@@ -1,0 +1,24 @@
+FUNNEL hold
+  markets in set 2,866,025
+  drop: no usable quote in any signal minute 2,671,548
+  tradeable markets 193,958
+  drop: quote but no spot/sigma/strike 488
+  drop: quote pull failed 31
+  drop: market not in quote files 0
+  traded M=0.06 delay=0m: markets 76,881 events 48,704 days 170
+  traded M=0.06 delay=1m: markets 129,472 events 77,711 days 170
+trades with no usable result (dropped): 0
+M=0.06 delay=0m  markets 76,881  events 48,704  days 170  mean -0.0091  t -3.9411  lo -0.0135  hi -0.0045
+M=0.06 delay=1m  markets 129,472  events 77,711  days 170  mean -0.0226  t -11.4365  lo -0.0263  hi -0.0187
+CONTROL mean -0.0236  (rule on same events -0.0091)
+RULE MINUS CONTROL {'events': 48704, 'days': 170, 'mean': np.float64(0.0146), 't': np.float64(6.19), 'lo': np.float64(0.0099), 'hi': np.float64(0.0192)}
+distinct close hours across coins (traded): 4042
+EXPLORATORY (never a pass)
+  15-minute only: events 36,745 mean -0.0097 t -3.65
+  hourly only: events 11,959 mean -0.0070 t -1.98
+  BTC: events 13,316 mean -0.0109 t -2.88
+  ETH: events 12,241 mean -0.0185 t -5.09
+  SOL: events 12,577 mean -0.0011 t -0.31
+  XRP: events 10,570 mean -0.0052 t -1.37
+  side mix: {'no': 43754, 'yes': 33127}  entry price median 0.22  minutes-before-close median 13.0
+DOLLAR CHECK: 452 trades a day x 10 contracts x -0.0101 per contract x 30 = -1,367 dollars a month

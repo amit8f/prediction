@@ -28,7 +28,7 @@ Owner: Amit (Israel, under $5,000, free tools only, small token budget). Use pla
 - Use the skills `preregistered-study` and `prediction-market-data-qa` when available.
 
 ## Status log
-- Ideas tried: 1. PM1 FAILED on the holdout 12 Nov 2026 (-5.1 cents per contract, t = -24): see `research/step3_pm1_result.md`. Holdout days up to 9 Nov 2026 are now used.
+- Ideas tried: 2. PM2 FAILED on the holdout 14 Nov 2026 (-0.9 cents per contract, t = -3.9, crypto lag vs spot): see `research/pm2_step3_result.md`. PM1 FAILED on the holdout 12 Nov 2026 (-5.1 cents per contract, t = -24): see `research/step3_pm1_result.md`. Holdout days up to 9 Nov 2026 are now used.
 - Step 1 (eligibility) done 11 Nov 2026: see `research/step1_eligibility.md`. Not a hard no on either platform. Israeli tax treatment is an open risk for a professional.
 - Step 2 done and signed off 12 Nov 2026: see `research/step2_data_checks.md`. PM1 Amendment 1 (section 17) approved by Amit before any outcome data: Sports, holdout = snapshot days from 18 Jun 2026, two bug fixes. Next: Step 3, the one test, in a new session. Listings are saved in the project Library under `data/`.
 - Kalshi pull notes: go series by series (an unfiltered pull is ~100k markets a day); the full listing pull takes about 3 hours and is not stored in the repo.
