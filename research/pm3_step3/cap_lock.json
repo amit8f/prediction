@@ -1,0 +1,7 @@
+{"idea": "PM3", "locked_at_utc": "2026-11-14T09:55Z", "C": 0.15,
+ "rule": "plan section 8: highest training event-level mean net per filled contract among C with >= 300 filled events",
+ "training": {"0.10": {"mean_cents": 1.7366, "filled_events": 3363, "t": 6.27},
+              "0.15": {"mean_cents": 1.7372, "filled_events": 3964, "t": 5.90},
+              "0.20": {"mean_cents": 1.6617, "filled_events": 4457, "t": 5.32}},
+ "note": "Locked before any holdout quote, trade or result was pulled. 0.15 beats 0.10 by 0.0006c, a tie in practice; the plan's rule picks 0.15.",
+ "taker_side_check": "In the 30 min after the snapshot on training, 25,379 of 40,062 taker_side=yes trades were at or above the snapshot ask, and 21,271 of 36,083 taker_side=no trades at or below the bid: taker_side=yes means the taker bought YES."}
