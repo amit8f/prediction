@@ -1,0 +1,5 @@
+pulled                                                   2,574,826
+kept                                                     2,547,937
+drop: scheduled close outside 1 Jan 2025-13 Nov 2026         3,703
+dup ticker (live+historical)                                22,766
+drop: bad open/close times                                     420
