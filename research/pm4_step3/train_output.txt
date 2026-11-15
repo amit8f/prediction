@@ -1,0 +1,11 @@
+== funnel train
+markets pulled                                                             1,988,220
+dropped: quote cannot carry an order (ask outside 3-97c or spread <2c)      954,156
+dropped: no 1-min candle in the 30 min up to snapshot                       558,275
+kept: quoted, order possible                                                475,724
+dropped: API failure                                                             65
+
+== fitting C on training (event-level mean net per filled contract)
+C=0.10 orders 416373 filled orders   3970 filled events  1726 days  351 mean -1.3215c t -2.22
+C=0.15 orders 421756 filled orders   5667 filled events  2166 days  357 mean -1.6572c t -2.72
+C=0.20 orders 426604 filled orders   7252 filled events  2527 days  361 mean -2.2447c t -3.47
