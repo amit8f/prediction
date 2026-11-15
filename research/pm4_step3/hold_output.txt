@@ -1,0 +1,28 @@
+== funnel hold
+markets pulled                                                              559,717
+dropped: quote cannot carry an order (ask outside 3-97c or spread <2c)      197,861
+dropped: no 1-min candle in the 30 min up to snapshot                       186,878
+kept: quoted, order possible                                                174,950
+dropped: API failure                                                             28
+
+== PRIMARY C=0.10: orders 27022, filled orders 2662 (9.9%), filled events 1503 of 3985, days with fills 128
+mean net per contract -3.020c  day-clustered t -4.01  bootstrap 95% [-4.596, -1.635]c
+contracts filled 23598, YES won on 11.5% of filled orders, mean sell price 0.054
+exploratory real per-series maker fee: mean -2.637c
+control: mean -8.068c (replicate 2.5-97.5%: -9.331, -6.754), filled events per replicate 2995
+rule minus control +5.049c, bootstrap 95% [+3.555, +6.482]c
+dollar check: filled contracts per day 159.4, filled orders per day 17.99, cash tied up per filled contract 0.946, implied monthly net $-144.44
+
+exploratory by month: filled contracts/day, event mean (c), implied $/month
+2026-05    86.4  +1.21   +31.24
+2026-06   160.0  -0.96   -46.03
+2026-07   124.7  -2.53   -94.61
+2026-08   103.9  -3.53  -110.12
+2026-09   152.4  -4.40  -201.01
+2026-10   281.3  -3.63  -306.53
+2026-11   298.6  -1.94  -173.47
+peak cash tied up at once $919.22
+
+exploratory by family: filled events, event mean (c), day-clustered t, filled contracts/day, implied $/month
+15min     781  -2.187  -2.85     51.2    -33.59
+rest      722  -3.920  -2.75    108.2   -127.31
