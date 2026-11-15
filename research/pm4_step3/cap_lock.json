@@ -1,0 +1,6 @@
+{"idea": "PM4", "locked_at_utc": "2026-11-15T04:45Z", "C": 0.10,
+ "rule": "plan section 7: highest training event-level mean net per filled contract among C with >= 300 filled events; ties to higher C",
+ "training": {"0.10": {"mean_cents": -1.3215, "filled_events": 1726, "t": -2.22},
+              "0.15": {"mean_cents": -1.6572, "filled_events": 2166, "t": -2.72},
+              "0.20": {"mean_cents": -2.2447, "filled_events": 2527, "t": -3.47}},
+ "note": "Locked before any holdout quote, trade or result was pulled. Every C loses money on training; the plan's rule still picks the least bad, 0.10, and the holdout test runs as written."}
